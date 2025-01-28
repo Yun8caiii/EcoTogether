@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { useGeolocation } from '../utils/useGeolocation';
+import CardTemplate from '../components/ui/CardTemplate';
 
 export default function Home() {
   const location = useGeolocation();
@@ -35,6 +36,23 @@ export default function Home() {
             </p>
           </div>
         )}
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <CardTemplate
+            title="Tree Planting"
+            description="Join us for a tree planting event."
+            content="Help plant trees in your local community and make a positive impact on the environment."
+          />
+          <CardTemplate
+            title="Recycling Drive"
+            description="Participate in our recycling drive."
+            content="Bring your recyclable items and help us sort them into the appropriate bins."
+          />
+          <CardTemplate
+            title="Beach Cleanup"
+            description="Join our beach cleanup event."
+            content="Help clean up the beach and remove trash to protect marine life."
+          />
+        </div>
       </div>
     </div>
   );

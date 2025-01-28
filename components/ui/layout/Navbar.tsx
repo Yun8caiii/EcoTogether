@@ -18,14 +18,16 @@ const Navbar = () => {
           <Link href="/events" className="text-white hover:text-gray-200 hover:bg-green-700 px-3 py-2 rounded">
             Events
           </Link>
+          <SignedIn>
+            <Link href="/create-event" className="text-white hover:text-gray-200 hover:bg-green-700 px-3 py-2 rounded">
+              Create Event
+            </Link>
+          </SignedIn>
           <Link href="/profile" className="text-white hover:text-gray-200 hover:bg-green-700 px-3 py-2 rounded">
             Profile
           </Link>
           <Link href="/leaderboard" className="text-white hover:text-gray-200 hover:bg-green-700 px-3 py-2 rounded">
             Leaderboard
-          </Link>
-          <Link href="/create-event" className="text-white hover:text-gray-200 hover:bg-green-700 px-3 py-2 rounded">
-            Create Event
           </Link>
           <SignedOut>
             <SignInButton>
