@@ -1,11 +1,11 @@
 import React from "react";
 import Link from "next/link";
 import {
-    SignInButton,
-    SignedIn,
-    SignedOut,
-    UserButton
-  } from '@clerk/nextjs'
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton
+} from '@clerk/nextjs'
 
 const Navbar = () => {
   return (
@@ -15,20 +15,24 @@ const Navbar = () => {
           <Link href="/">EcoTogether</Link>
         </div>
         <div className="space-x-4">
-          <Link href="/events" className="text-white hover:text-gray-200">
+          <Link href="/events" className="text-white hover:text-gray-200 hover:bg-green-700 px-3 py-2 rounded">
             Events
           </Link>
-          <Link href="/profile" className="text-white hover:text-gray-200">
+          <Link href="/profile" className="text-white hover:text-gray-200 hover:bg-green-700 px-3 py-2 rounded">
             Profile
           </Link>
-          <Link href="/leaderboard" className="text-white hover:text-gray-200">
+          <Link href="/leaderboard" className="text-white hover:text-gray-200 hover:bg-green-700 px-3 py-2 rounded">
             Leaderboard
           </Link>
-          <Link href="/create-event" className="text-white hover:text-gray-200">
+          <Link href="/create-event" className="text-white hover:text-gray-200 hover:bg-green-700 px-3 py-2 rounded">
             Create Event
           </Link>
           <SignedOut>
-            <SignInButton />
+            <SignInButton>
+              <button className="text-white hover:text-gray-200 hover:bg-green-700 px-3 py-2 rounded">
+                Sign In
+              </button>
+            </SignInButton>
           </SignedOut>
           <SignedIn>
             <UserButton />
